@@ -1,3 +1,19 @@
+
+.cmyk span {
+  font-family: 'Fredoka One', Times;
+  color: white;
+}
+
+.cmyk:hover {
+  transition: all 0.7s ease;
+  text-shadow: .75rem -0.75rem rgba(255, 0, 255, 0.75), -0.75rem -0.25rem rgba(0, 255, 255, 0.75), 0.725rem 1.25rem rgba(255, 255, 0, 0.75);
+  
+  color: rgba(255,255,255,0);
+
+}
+
+
+
 html {
   background-color: black;
   color: white;
@@ -135,18 +151,6 @@ padding-left: 15px;
 }
 
 
-
-.cmyk span {
-  font-family: 'Fredoka One', Times;
-}
-
-.cmyk:hover {
-  transition: all 0.7s ease;
-  text-shadow: .75rem -0.75rem rgba(255, 0, 255, 0.75), -0.75rem -0.25rem rgba(0, 255, 255, 0.75), 0.725rem 1.25rem rgba(255, 255, 0, 0.75);
-  
-  color: rgba(255,255,255,0);
-
-}
 
 .skewed {
   background: url(//stephy.mccdgm.net/images/patterns/dark_wood.png) #2b2b2b;
