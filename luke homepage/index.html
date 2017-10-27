@@ -20,12 +20,55 @@
 <script type="text/javascript">
 
 
+
+
+
+
+
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 
 $(function() {
+
+
+/* SWITCH */
+
+
+
+
+$('.toggle').click(function(e){
+  e.preventDefault(); // The flicker is a codepen thing
+  $(this).toggleClass('toggle-on');
+
+
+  // switch cmyk css classes
+  if( $('#cmyk').attr('class') == 'cmyk' ){
+      $('#cmyk').removeClass('cmyk');
+      $("#cmyk").toggleClass("cmyk2");
+    $('html').css('background-color','white');
+
+  
+  }
+  else {
+    $('#cmyk').removeClass('cmyk2');
+    $("#cmyk").toggleClass("cmyk");
+    $('html').css('background-color','black');
+  }
+
+
+  //$("#cmyk").toggleClass("cmyk2");
+  //$("html").css("background-color:white;");
+
+  //alert( $('#cmyk').attr('class') );
+
+
+});
+
+
+
+
 
    // theres a better way to do this
    var navs = ['nav1', 'nav2', 'nav3', 'nav4'];
@@ -83,33 +126,43 @@ Music
 </div>
 -->
 
-<img src="images/beta.jpg" style="position: absolute; height:10%; width:9%;">
+<img src="images/beta.jpg" style="position: relative; height:10%; width:9%;">
 
 
 
-<section class="cmyk" id="cmyk">
+
+<div class='toggle' id='switch'>
+    <div class='toggle-text-off'>NIGHT MODE OFF</div>
+    <div class='glow-comp'></div>
+    <div class='toggle-button'></div>
+    <div class='toggle-text-on'>NIGHT MODE ON</div>
+</div>
+  
+
+
+<div>
+<section class="cmyk2" id="cmyk">
   <span>Luke Endres</span>
 </section>
-
-<div class="navBlock"></div>
-
-<div class='story'>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non purus eget mi convallis suscipit nec a risus. Nunc sodales lacus sit amet rutrum condimentum. Fusce eu risus maximus, tempor risus id, porta lorem. Proin non felis semper enim ultricies ornare non et justo. Suspendisse euismod ante risus, et tempor nunc facilisis ac. Aenean vitae suscipit felis. Ut arcu mauris, vehicula vel massa non, tincidunt ultricies massa.<br><br>
-
-Aenean ornare pellentesque eros nec euismod. Donec rutrum et nisi sit amet cursus. Maecenas eu arcu porta, malesuada erat ornare, semper lacus. Proin scelerisque libero quis justo bibendum, et auctor lectus accumsan. Fusce rutrum tortor at consequat porta. Duis laoreet porta arcu sed congue. Pellentesque maximus nisi volutpat ligula placerat pretium. Integer volutpat mollis nibh, a placerat quam eleifend a. Duis eget pellentesque nisl, id efficitur felis.<br><br>
-
-Proin ultricies, leo sit amet venenatis mattis, magna tellus congue diam, vitae semper nisi nisi non enim. Vivamus risus est, tempor in nibh sit amet, porta iaculis ligula. Aliquam at enim in nisi mattis sodales. Pellentesque non nisl turpis. Nulla facilisis ligula ac arcu posuere, at eleifend metus iaculis. Curabitur a lacinia nulla. Cras ante turpis, blandit non sollicitudin vitae, laoreet at risus. Fusce vel pretium dui.<br><br>
-
-Nulla sed ligula molestie, venenatis enim a, consectetur nibh. Praesent cursus sit amet arcu eu pharetra. Mauris faucibus, lectus eu sollicitudin facilisis, elit lacus efficitur risus, vel efficitur est ante mollis lacus. Vivamus vitae velit a nunc sagittis sodales. Aenean dictum auctor diam, sit amet dapibus felis vulputate eget. Maecenas quis efficitur tortor. Maecenas id tempus libero. Etiam quis nunc sit amet enim posuere pellentesque. Maecenas rutrum non urna sit amet euismod. Maecenas ac ante ipsum. Donec rhoncus libero a libero sagittis, non ultrices velit eleifend. Morbi congue leo vel ligula vehicula finibus. Integer vitae orci id mi elementum laoreet. Quisque magna ex, viverra in maximus sed, lobortis quis erat.<br><br>
-</div>  
-<span>
+</div>
 
 
-</span>
 
+
+
+
+
+
+<div class="navBlock">
+  <span>Home</span>
+  <span>About</span>
+  <span>Contact</span>
+</div>
+
+
+
+ 
     
     
-    
-    
-  </body>
+</body>
 </html>
